@@ -30,6 +30,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
   database:
+    platform: '${PLATFORM:-default}'
     build:
       context: "./bin/${DATABASE}"
     container_name: "${COMPOSE_PROJECT_NAME}-${DATABASE}"

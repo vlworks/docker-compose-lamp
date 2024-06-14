@@ -101,3 +101,6 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+# Composer
+COPY --from=composer /usr/bin/composer /usr/bin/composer
