@@ -53,7 +53,7 @@ services:
       - database
     environment:
       PMA_HOST: database
-      PMA_PORT: 3306
+      PMA_PORT: ${HOST_MACHINE_MYSQL_PORT}
       PMA_USER: root
       PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
